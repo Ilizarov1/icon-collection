@@ -1,24 +1,19 @@
-import { Layout, Menu } from 'antd';
+import styles from '../../styles/common/Header.module.scss'
+import logo from '../../public/Logo.svg'
+import Image from 'next/image'
+import Menu from './Menu'
 
-const { Header } = Layout;
-
-function header() {
+function Header() {
 	return (
-		<>
-			<Header>
-				<Menu
-					theme="dark"
-					mode="horizontal"
-					items={new Array(5).fill(null).map((_, index) => {
-						const key = index + 1;
-						return {
-							key,
-							label: `nav ${key}`,
-						};
-					})}
-				/>
-			</Header>
-		</>
-	);
+		<div className={styles.container}>
+			<div className={styles.main}>
+				<div className={styles.logo}>
+					<Image src={logo} alt="logo" />
+				</div>
+				<div className={styles.menu}><Menu /></div>
+				<div>SSO</div>
+			</div>
+		</div>
+	)
 }
-export default header;
+export default Header
