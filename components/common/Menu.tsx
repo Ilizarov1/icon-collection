@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { MouseEventHandler, useState } from 'react'
 import styles from '../../styles/common/Menu.module.scss'
 
 function Menu() {
@@ -10,11 +10,17 @@ function Menu() {
 		'帮助中心',
 	])
 
+  const handleClick = (idx: number) => {
+    return () => {
+      setActive(idx)
+    }
+  }
+  
 	return (
 		<>
 			{menuLst.map((val, idx) => {
 				return (
-					<span className={active === idx? styles.menuActive : styles.menuItem} key={val}>
+					<span onClick={handleClick(idx)} className={active === idx? styles.menuActive : styles.menuItem} key={idx}>
 						{val}
 					</span>
 				)
