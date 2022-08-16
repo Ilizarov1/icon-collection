@@ -3,11 +3,8 @@ import logo from '../../public/Logo.svg'
 import Image from 'next/image'
 import Menu from './Menu'
 
-interface IProps {
-	active?: number
-}
 
-function Header({ active }: IProps) {
+function Header() {
 	return (
 		<div className={styles.container}>
 			<div className={styles.main}>
@@ -15,7 +12,7 @@ function Header({ active }: IProps) {
 					<Image src={logo} alt="logo" />
 				</div>
 				<div className={styles.menu}>
-					<Menu active={active} />
+					<Menu />
 				</div>
 				<div>SSO</div>
 			</div>
