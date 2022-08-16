@@ -1,21 +1,20 @@
-import type { NextPage } from 'next';
-import Header from '../components/common/Header';
+import type { NextPage } from 'next'
+import Header from '../components/common/Header'
+import useSWR from 'swr'
+import React from 'react'
 
-import useSWR from 'swr';
-
-const fetcher = (url: URL) => fetch(url).then((r) => r.json());
-
+const fetcher = (url: URL) => fetch(url).then((r) => r.json())
 const Home: NextPage = () => {
-	const { data, error } = useSWR('./api/hello', fetcher);
+	const { data, error } = useSWR('./api/hello', fetcher)
 
-	if (error) return <div>failed to load</div>;
-	if (!data) return <div>loading...</div>;
+	if (error) return <div>failed to load</div>
+	if (!data) return <div>loading...</div>
 
 	return (
 		<div>
 			<Header />
 		</div>
-	);
-};
+	)
+}
 
-export default Home;
+export default Home

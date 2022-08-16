@@ -2,7 +2,8 @@ import type { NextPage } from 'next'
 import React from 'react'
 import Header from '../components/common/Header'
 
-const Icon: NextPage = () => {
+
+const Admin: NextPage = () => {
 	return (
 		<div>
 			<Header />
@@ -10,4 +11,4 @@ const Icon: NextPage = () => {
 	)
 }
 
-export default Icon
+export default Admin
