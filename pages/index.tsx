@@ -4,6 +4,7 @@ import Header from '../components/common/Header'
 import useSWR from 'swr'
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import NextLink from 'next/link'
 
 const fetcher = (url: URL) => fetch(url).then((r) => r.json())
 
@@ -34,6 +35,8 @@ const Home: NextPage = () => {
 					</Routes>
 				</div>
 			</Router>
+
+			<NextLink href='/collection'> collection </NextLink>
 		</div>
 	)
 }
