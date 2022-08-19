@@ -1,4 +1,49 @@
 .main {
   flex: 1;
   background-color: #232323;
+  position: relative;
+  .lineGrp {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .line {
+      width: 0.5px;
+      height: 100vh;
+      margin-top: -80px;
+      background-color: #333333;
+    }
+  }
+  .logo {
+    position: absolute;
+    bottom: 300px;
+    left: 570px;
+  }
+  .footer {
+    position: absolute;
+    height: 56px;
+    left: 240px;
+    bottom: 65px;
+    color: #ffffff;
+    .name {
+      display: inline-block;
+      height: 24px;
+      line-height: 24px;
+      font-size: 24px;
+      font-weight: bold;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .comp {
+      display: inline-block;
+      font-size: 14px;
+      background-color: #454545;
+      border-radius: 6px;
+      height: 24px;
+      > span {
+        line-height: 24px;
+        vertical-align: middle;
+        padding: 0 8px;
+      }
+    }
+  }
 }
