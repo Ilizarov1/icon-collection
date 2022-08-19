@@ -8,3 +8,11 @@
   color: #ffffff;
   cursor: pointer;
 }
+.menuContainer {
+  display: flex;
+  justify-content: center;
+  width: 800px;
+  :last-child {
+    margin-right: 0;
+  }
+}
