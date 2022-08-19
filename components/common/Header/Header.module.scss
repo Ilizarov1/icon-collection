@@ -1,0 +1,21 @@
+.container {
+  background-color: #232323;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  width: 1000px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  .logo {
+    margin-right: 300px;
+  }
+  .menu {
+    margin-right: 215px;
+  }
+}

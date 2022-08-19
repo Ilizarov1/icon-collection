@@ -1,5 +1,5 @@
-import styles from '../../styles/common/Header.module.scss'
-import logo from '../../public/Logo.svg'
+import styles from './Header.module.scss'
+import logo from '../../../public/Logo.svg'
 import Image from 'next/image'
 import Menu from './Menu'
 

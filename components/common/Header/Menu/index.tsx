@@ -1,5 +1,5 @@
 import { MouseEventHandler, useState } from 'react'
-import styles from '../../styles/common/Menu.module.scss'
+import styles from './Menu.module.scss'
 
 function Menu() {
 	const [active, setActive] = useState(0)
